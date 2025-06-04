@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Model Showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head><body>
+    <header>
+        <h1>Traffic Optimisation Model Showcase</h1>
+    </header>
+
+    <main>
+        <section id="project-summary">
+            <h2>Project Overview & Architecture</h2>
+            <p>
+                This project demonstrates the application of various machine learning models
+                for traffic volume prediction. The goal is to analyze and compare the performance
+                of models like Linear Regression, Random Forest, and XGBoost in forecasting
+                traffic conditions. Key features used for prediction include time of day, day of the week,
+                month, weather conditions, and junction-specific data.
+            </p>
+            <p>
+                Below, you can select a visualization to view specific model performance metrics,
+                data explorations, or other relevant analyses.
+            </p>
+            <!-- If you have an image for overall architecture, you can add it here: -->
+            <!-- <img src="images/overall_architecture.png" alt="Overall Project Architecture" class="architecture-image"> -->
+        </section>
+
+        <section class="model-display">
+            <h2>Select Visualization:</h2>
+            <div class="custom-select-wrapper">
+                <select id="visualizationSelector">
+                    <option value="">-- Choose a Visualization --</option>
+                    
+                    <optgroup label="Model Performance">
+                        <option value="LR-actual vs predicted vehicle count">Linear Regression: Actual vs Predicted</option>
+                        <option value="randomForest">Random Forest: Actual vs Predicted</option>
+                        <option value="xgboost">XGBoost: Actual vs Predicted</option>
+                        <option value="RF-average vehicle count by hour of day">Random Forest: Average Count by Hour</option>
+                        <!-- If "Predicted Traffic Pattern Over a Day (Weekday)" is model-specific, add here -->
+                    </optgroup>
+                    
+                    <optgroup label="Model Comparison">
+                        <option value="model_comparison">Comparison: R2 Score vs MAE</option>
+                    </optgroup>
+
+                    <optgroup label="Data Exploration & Time Series">
+                        <option value="junction1_vehicle_count_time">Junction 1: Vehicle Count Over Time</option>
+                        <!-- In index.html -->
+                         <option value="all_junctions_volume_time">All Junctions: Traffic Volume Over Time</option> 
+                        <option value="vehicle_count_distribution">Overall: Vehicle Count Distribution</option>
+                        
+                        <!-- Assuming this is a general example -->
+                    </optgroup>
+                    <!-- Add more options/groups here if you have them -->
+                </select>
+            </div>
+
+            <div id="imageContainer">
+                <h3 id="imageTitle">Selected Visualization</h3>
+                <img id="displayedImage" src="#" alt="Selected visualization" style="display:none;">
+                <p id="placeholderText">Please select a visualization from the dropdown to see its image.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Manmohan Sajwan / Traffic Optimisation  Using ML</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
